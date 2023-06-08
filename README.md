@@ -75,7 +75,7 @@ export const MyComponent = () => {
 
   return (
     <InteractiveUI data={data} />
-		// Stop Metric when the UI is fully interactive!
+    // Stop Metric when the UI is fully interactive!
     <StopMetric metric={MyMetric} />
   );
 }
