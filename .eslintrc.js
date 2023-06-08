@@ -27,7 +27,7 @@ module.exports = {
 			jsx: true,
 		},
 	},
-	plugins: ["react", "plugin:react-hooks/recommended", "simple-import-sort", "@typescript-eslint", "prettier", "unused-imports"],
+	plugins: ["react", "simple-import-sort", "@typescript-eslint", "prettier", "unused-imports"],
 	rules: {
 		"radix": 0,
 		"no-new": 0,

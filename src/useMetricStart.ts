@@ -1,20 +1,23 @@
-import { useEffect, type FC } from "react";
 import type { Metric } from "@figliolia/metrics";
+import { useEffect } from "react";
 
 /**
- * Start Metric
- * 
- * A React Component that will call the `start()` method on the 
+ * Use Metric Start
+ *
+ * A React Hook that will call the `start()` method on the
  * specified `Metric` as soon as it mounts
- * 
+ *
  * ```tsx
  * import { Metric } from "@figliolia/metrics";
- * import { StartMetric, StopMetric } from "@figliolia/react-metrics"
- * 
+ * import { useMetricStart } from "@figliolia/react-metrics"
+ *
  * const MyMetric = new Metric("My Metric");
- * 
+ *
  * export const MyComponent = () => {
  *   const [data, setData] = useState(null);
+ *
+ * 	 useMetricStart(MyMetric);
+ *
  *   useEffect(() => {
  *     fetch("/data").then(async data => {
  *       setData(await data.json());
@@ -23,14 +26,11 @@ import type { Metric } from "@figliolia/metrics";
  *       MyMetric.reset();
  *     }
  *   }, []);
- * 
+ *
  *   if(!data) {
- *     return (
- *       <StartMetric metric={MyMetric}> // Calls your Metric's start() method on mount
- *       <Spinner />
- *     );
+ *     return <Spinner />;
  *   }
- * 
+ *
  *   return (
  *     <MyComponentUI data={data} />
  *     <StopMetric metric={MyMetric} />
@@ -38,9 +38,8 @@ import type { Metric } from "@figliolia/metrics";
  * }
  * ```
  */
-export const StartMetric: FC<{ metric: Metric }> = ({ metric }) => {
-	useEffect(() => {
-		metric.start();
-	}, [])
-	return null;
-}
+export const useMetricStart = <T extends Metric<any, any>>(metric: T) => {
+  useEffect(() => {
+    metric.start();
+  }, []);
+};
