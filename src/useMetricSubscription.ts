@@ -15,7 +15,7 @@ import type { IMetricSubscription } from "types";
  *
  * const MyMetric = new Metric("My Metric");
  *
- * const MyComponent = () => {
+ * const DurationDisplay = () => {
  *   const [duration, setDuration] = useState<number | null>(null);
  *
  *   useMetricSubscription({

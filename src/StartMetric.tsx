@@ -1,5 +1,5 @@
 import type { Metric } from "@figliolia/metrics";
-import { useMetricStart } from "./useMetricStart";
+import { useStartMetric } from "./useStartMetric";
 
 /**
  * Start Metric
@@ -43,6 +43,6 @@ export const StartMetric = <T extends Metric<any, any>>({
 }: {
   metric: T;
 }) => {
-  useMetricStart(metric);
+  useStartMetric(metric);
   return null;
 };

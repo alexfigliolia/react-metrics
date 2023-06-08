@@ -1,5 +1,5 @@
 import type { Metric } from "@figliolia/metrics";
-import { useMetricStop } from "./useMetricStop";
+import { useStopMetric } from "./useStopMetric";
 
 /**
  * Stop Metric
@@ -44,6 +44,6 @@ export const StopMetric = <T extends Metric<any, any>>({
 }: {
   metric: T;
 }) => {
-  useMetricStop(metric);
+  useStopMetric(metric);
   return null;
 };

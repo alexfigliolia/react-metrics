@@ -2,21 +2,21 @@ import type { Metric } from "@figliolia/metrics";
 import { useEffect } from "react";
 
 /**
- * Use Metric Start
+ * Use Start Metric
  *
  * A React Hook that will call the `start()` method on the
  * specified `Metric` as soon as it mounts
  *
  * ```tsx
  * import { Metric } from "@figliolia/metrics";
- * import { useMetricStart } from "@figliolia/react-metrics"
+ * import { useStartMetric } from "@figliolia/react-metrics"
  *
  * const MyMetric = new Metric("My Metric");
  *
  * export const MyComponent = () => {
  *   const [data, setData] = useState(null);
  *
- * 	 useMetricStart(MyMetric);
+ * 	 useStartMetric(MyMetric);
  *
  *   useEffect(() => {
  *     fetch("/data").then(async data => {
@@ -38,7 +38,7 @@ import { useEffect } from "react";
  * }
  * ```
  */
-export const useMetricStart = <T extends Metric<any, any>>(metric: T) => {
+export const useStartMetric = <T extends Metric<any, any>>(metric: T) => {
   useEffect(() => {
     metric.start();
   }, []);

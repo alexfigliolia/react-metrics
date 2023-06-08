@@ -15,7 +15,7 @@ import { useMetricSubscription } from "./useMetricSubscription";
  *
  * const MyMetric = new Metric("My Metric");
  *
- * const MyComponent = () => {
+ * const DurationDisplay = () => {
  *   const [duration, setDuration] = useState<number | null>(null);
  *
  *   return (
@@ -24,7 +24,7 @@ import { useMetricSubscription } from "./useMetricSubscription";
  *         event="stop"
  *         metric={MyMetric}
  *         callback={metric => {
- *           setDuration(metric.duration)
+ *           setDuration(metric.duration);
  *         }} />
  *       {
  *         duration === null ?

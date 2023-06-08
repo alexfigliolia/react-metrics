@@ -9,13 +9,13 @@ import { useEffect } from "react";
  *
  * ```tsx
  * import { Metric } from "@figliolia/metrics";
- * import { useMetricStop } from "@figliolia/react-metrics"
+ * import { useStopMetric } from "@figliolia/react-metrics"
  *
  * const MyMetric = new Metric("My Metric");
  *
  * export const MyComponent: FC<{ data: string[] }> = ({ data }) => {
  *   // Stops the provided metric on mount
- *   useMetricStop(MyMetric);
+ *   useStopMetric(MyMetric);
  *
  *   return (
  *     <ol>
@@ -27,7 +27,7 @@ import { useEffect } from "react";
  * }
  * ```
  */
-export const useMetricStop = <T extends Metric<any, any>>(metric: T) => {
+export const useStopMetric = <T extends Metric<any, any>>(metric: T) => {
   useEffect(() => {
     metric.stop();
   }, []);
