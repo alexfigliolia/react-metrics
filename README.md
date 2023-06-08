@@ -151,3 +151,6 @@ const DurationDisplay: FC<{ metric: Metric<any, any>}> = ({ metric }) => {
   return <div>{metric.name} is complete! The duration was {duration} milliseconds</div>
 }
 ```
+
+### Demo Application
+To find some recipes in an example application, please reference our [Demo App](https://github.com/alexfigliolia/metrics-demo)
