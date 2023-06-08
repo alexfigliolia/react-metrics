@@ -30,7 +30,9 @@
     "developer tooling",
     "Logging",
     "Page Load",
-    "Reporting"
+    "Reporting",
+    "React",
+    "@figliolia/metrics"
   ],
   "author": "Alex Figliolia",
   "license": "MIT",

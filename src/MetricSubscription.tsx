@@ -1,6 +1,6 @@
-import type { FC } from "react";
-import type { IMetricSubscription } from "types";
-import { useMetricSubscription } from "useMetricSubscription";
+import type { Metric } from "@figliolia/metrics";
+import type { IMetricSubscription } from "./types";
+import { useMetricSubscription } from "./useMetricSubscription";
 
 /**
  * Metric Subscription
@@ -37,7 +37,9 @@ import { useMetricSubscription } from "useMetricSubscription";
  * }
  * ```
  */
-export const MetricSubscription: FC<IMetricSubscription> = (configuration) => {
+export const MetricSubscription = <T extends Metric<any, any>>(
+  configuration: IMetricSubscription<T>
+) => {
   useMetricSubscription(configuration);
   return null;
 };

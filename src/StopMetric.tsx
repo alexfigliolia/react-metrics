@@ -1,6 +1,5 @@
-import { type FC } from "react";
 import type { Metric } from "@figliolia/metrics";
-import { useMetricStop } from "useMetricStop";
+import { useMetricStop } from "./useMetricStop";
 
 /**
  * Stop Metric
@@ -40,7 +39,11 @@ import { useMetricStop } from "useMetricStop";
  * }
  * ```
  */
-export const StopMetric: FC<{ metric: Metric }> = ({ metric }) => {
+export const StopMetric = <T extends Metric<any, any>>({
+  metric,
+}: {
+  metric: T;
+}) => {
   useMetricStop(metric);
   return null;
 };
