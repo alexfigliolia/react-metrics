@@ -7,7 +7,7 @@ This library is designed to make integrating Metric events with React rendering 
 ```bash
 npm i -S @figliolia/react-metrics
 # or
-yarn add @figliolia/react-metricsasdf
+yarn add @figliolia/react-metrics
 ```
 
 ## Getting Started
