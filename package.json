@@ -1,6 +1,6 @@
 {
   "name": "@figliolia/react-metrics",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React bindings for @figliolia/metrics",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -37,7 +37,7 @@
   "author": "Alex Figliolia",
   "license": "MIT",
   "dependencies": {
-    "@figliolia/metrics": "^1.0.0"
+    "@figliolia/metrics": "^1.0.3"
   },
   "devDependencies": {
     "@types/node": "^16.7.13",
