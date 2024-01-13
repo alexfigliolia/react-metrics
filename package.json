@@ -1,17 +1,25 @@
 {
   "name": "@figliolia/react-metrics",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React bindings for @figliolia/metrics",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/mjs/index.js",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist",
     "src/*"
   ],
   "scripts": {
     "test": "jest",
-    "build": "rm -rf dist && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
-    "lint": "tsc --noemit && eslint ./ --fix"
+    "build": "npx ts-packager -e src",
+    "lint": "tsc --noemit && eslint ./src --fix"
   },
   "homepage": "https://github.com/alexfigliolia/react-metrics#readme",
   "repository": {
@@ -37,9 +45,10 @@
   "author": "Alex Figliolia",
   "license": "MIT",
   "dependencies": {
-    "@figliolia/metrics": "^1.0.3"
+    "@figliolia/metrics": "^1.0.5"
   },
   "devDependencies": {
+    "@figliolia/ts-packager": "^1.0.3",
     "@types/node": "^16.7.13",
     "@types/react": "^18.2.9",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
