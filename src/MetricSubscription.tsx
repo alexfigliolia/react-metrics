@@ -38,7 +38,7 @@ import { useMetricSubscription } from "./useMetricSubscription";
  * ```
  */
 export const MetricSubscription = <T extends Metric<any, any>>(
-  configuration: IMetricSubscription<T>
+  configuration: IMetricSubscription<T>,
 ) => {
   useMetricSubscription(configuration);
   return null;

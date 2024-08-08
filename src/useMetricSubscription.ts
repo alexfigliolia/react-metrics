@@ -1,6 +1,6 @@
-import type { Metric } from "@figliolia/metrics";
 import { useEffect } from "react";
-import type { IMetricSubscription } from "types";
+import type { Metric } from "@figliolia/metrics";
+import type { IMetricSubscription } from "./types";
 
 /**
  * Use Metric Subscription
@@ -44,5 +44,5 @@ export const useMetricSubscription = <T extends Metric<any, any>>({
     return () => {
       metric.off(event, ID);
     };
-  }, []);
+  }, [metric, callback, event]);
 };

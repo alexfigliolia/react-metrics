@@ -1,5 +1,5 @@
-import type { Metric } from "@figliolia/metrics";
 import { useEffect } from "react";
+import type { Metric } from "@figliolia/metrics";
 
 /**
  * Use Metric Stop
@@ -30,5 +30,5 @@ import { useEffect } from "react";
 export const useStopMetric = <T extends Metric<any, any>>(metric: T) => {
   useEffect(() => {
     metric.stop();
-  }, []);
+  }, [metric]);
 };
