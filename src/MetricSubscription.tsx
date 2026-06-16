@@ -1,4 +1,4 @@
-import type { Metric } from "@figliolia/metrics";
+import type { Metric } from "@ui-perf/metrics";
 
 import { useMetricSubscription } from "./useMetricSubscription";
 import type { IMetricSubscription } from "./types";
@@ -11,8 +11,8 @@ import type { IMetricSubscription } from "./types";
  * is cleaned up.
  *
  * ```tsx
- * import { Metric } from "@figliolia/metrics";
- * import { MetricSubscription } from "@figliolia/metrics";
+ * import { Metric } from "@ui-perf/metrics";
+ * import { MetricSubscription } from "@ui-perf/metrics";
  *
  * const MyMetric = new Metric("My Metric");
  *

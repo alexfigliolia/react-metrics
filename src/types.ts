@@ -1,4 +1,4 @@
-import type { Metric } from "@figliolia/metrics";
+import type { Metric } from "@ui-perf/metrics";
 
 export interface IMetricSubscription<
   T extends Metric<any, any> = Metric<any, any>,

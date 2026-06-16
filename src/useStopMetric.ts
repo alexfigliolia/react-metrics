@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import type { Metric } from "@figliolia/metrics";
+import type { Metric } from "@ui-perf/metrics";
 
 /**
  * Use Metric Stop
@@ -8,8 +8,8 @@ import type { Metric } from "@figliolia/metrics";
  * specified `Metric` as soon as it mounts
  *
  * ```tsx
- * import { Metric } from "@figliolia/metrics";
- * import { useStopMetric } from "@figliolia/react-metrics"
+ * import { Metric } from "@ui-perf/metrics";
+ * import { useStopMetric } from "@ui-perf/react-metrics"
  *
  * const MyMetric = new Metric("My Metric");
  *
