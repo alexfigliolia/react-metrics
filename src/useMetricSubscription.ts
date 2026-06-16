@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import type { Metric } from "@figliolia/metrics";
+
 import type { IMetricSubscription } from "./types";
 
 /**

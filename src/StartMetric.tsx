@@ -1,4 +1,5 @@
 import type { Metric } from "@figliolia/metrics";
+
 import { useStartMetric } from "./useStartMetric";
 
 /**
@@ -33,7 +34,7 @@ import { useStartMetric } from "./useStartMetric";
  *
  *   return (
  *     <MyComponentUI data={data} />
- *     <StopMetric metric={MyMetric} />
+ *     <StopMetric metric={MyMetric} /> // Calls your Metric's stop() method on first contentful render
  *   );
  * }
  * ```

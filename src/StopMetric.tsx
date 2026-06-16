@@ -1,4 +1,5 @@
 import type { Metric } from "@figliolia/metrics";
+
 import { useStopMetric } from "./useStopMetric";
 
 /**
@@ -27,7 +28,7 @@ import { useStopMetric } from "./useStopMetric";
  *
  *   if(!data) {
  *     return (
- *       <StartMetric metric={MyMetric}>
+ *       <StartMetric metric={MyMetric}> // Calls your Metric's start() method on mount
  *       <Spinner />
  *     );
  *   }
