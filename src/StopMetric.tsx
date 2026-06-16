@@ -1,4 +1,4 @@
-import type { Metric } from "@figliolia/metrics";
+import type { Metric } from "@ui-perf/metrics";
 
 import { useStopMetric } from "./useStopMetric";
 
@@ -9,8 +9,8 @@ import { useStopMetric } from "./useStopMetric";
  * specified `Metric` as soon as it mounts
  *
  * ```tsx
- * import { Metric } from "@figliolia/metrics";
- * import { StopMetric } from "@figliolia/react-metrics"
+ * import { Metric } from "@ui-perf/metrics";
+ * import { StopMetric } from "@ui-perf/react-metrics"
  *
  * const MyMetric = new Metric("My Metric");
  *

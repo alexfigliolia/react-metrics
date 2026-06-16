@@ -8,15 +8,15 @@ importers:
 
   .:
     devDependencies:
-      '@figliolia/metrics':
-        specifier: ^2.0.0
-        version: 2.0.0(@figliolia/event-emitter@1.2.0)(beaconer@1.0.2)
       '@types/node':
         specifier: ^25.9.3
         version: 25.9.3
       '@types/react':
         specifier: ^19.2.17
         version: 19.2.17
+      '@ui-perf/metrics':
+        specifier: ^2.0.0
+        version: 2.0.0(@figliolia/event-emitter@1.2.0)(beaconer@1.0.2)
       oxfmt:
         specifier: ^0.55.0
         version: 0.55.0
@@ -235,12 +235,6 @@ packages:
 
   '@figliolia/event-emitter@1.2.0':
     resolution: {integrity: sha512-cEuKUJx8cG5ED7p4xGm5x/OUjZUAcz28P8syO5tnvoiRnd33RkMvsz249YBX97vQGTPYLIi18A1ZeUwyr4ITbw==}
-
-  '@figliolia/metrics@2.0.0':
-    resolution: {integrity: sha512-iXVfndCSe/3SXNXT8RgnK4O8A/Sw+vDL9jCRHT6JpGcielY87fgIiacMGj6Mqu9nkTMTUmlgtQkVN6GfeZHP1Q==}
-    peerDependencies:
-      '@figliolia/event-emitter': ^1.1.5
-      beaconer: ^1.0.2
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -665,6 +659,12 @@ packages:
 
   '@types/react@19.2.17':
     resolution: {integrity: sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==}
+
+  '@ui-perf/metrics@2.0.0':
+    resolution: {integrity: sha512-/qskVDRiUmoeIHRwGx+Wbe36/hNO8jh/E7PDhkWeYTqHLS9gCc/t/8LB7F7GALPjpjp+2Y+C9XSD98jWLFrZKw==}
+    peerDependencies:
+      '@figliolia/event-emitter': ^1.1.5
+      beaconer: ^1.0.2
 
   ansis@4.3.1:
     resolution: {integrity: sha512-BJ8/l4R5LRE7hW9WdSuGYrLSHi2ynxeFpDFbH0K/CgNeY/tyhk+vO6TYxXC5r5CpUhNVX310xzPsN/H9lCdfOA==}
@@ -1155,11 +1155,6 @@ snapshots:
 
   '@figliolia/event-emitter@1.2.0': {}
 
-  '@figliolia/metrics@2.0.0(@figliolia/event-emitter@1.2.0)(beaconer@1.0.2)':
-    dependencies:
-      '@figliolia/event-emitter': 1.2.0
-      beaconer: 1.0.2
-
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
@@ -1398,6 +1393,11 @@ snapshots:
   '@types/react@19.2.17':
     dependencies:
       csstype: 3.2.3
+
+  '@ui-perf/metrics@2.0.0(@figliolia/event-emitter@1.2.0)(beaconer@1.0.2)':
+    dependencies:
+      '@figliolia/event-emitter': 1.2.0
+      beaconer: 1.0.2
 
   ansis@4.3.1: {}
 

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import type { Metric } from "@figliolia/metrics";
+import type { Metric } from "@ui-perf/metrics";
 
 import type { IMetricSubscription } from "./types";
 
@@ -11,8 +11,8 @@ import type { IMetricSubscription } from "./types";
  * cleaned up.
  *
  * ```tsx
- * import { Metric } from "@figliolia/metrics";
- * import { useMetricSubscription } from "@figliolia/metrics";
+ * import { Metric } from "@ui-perf/metrics";
+ * import { useMetricSubscription } from "@ui-perf/metrics";
  *
  * const MyMetric = new Metric("My Metric");
  *

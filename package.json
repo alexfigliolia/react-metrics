@@ -1,9 +1,9 @@
 {
-  "name": "@figliolia/react-metrics",
+  "name": "@ui-perf/react-metrics",
   "version": "1.1.0",
-  "description": "React bindings for @figliolia/metrics",
+  "description": "React bindings for @ui-perf/metrics",
   "keywords": [
-    "@figliolia/metrics",
+    "@ui-perf/metrics",
     "CLS",
     "Logging",
     "Page Load",
@@ -47,9 +47,9 @@
     "lint": "pnpm oxlint --type-aware --report-unused-disable-directives --fix && pnpm oxfmt"
   },
   "devDependencies": {
-    "@figliolia/metrics": "^2.0.0",
     "@types/node": "^25.9.3",
     "@types/react": "^19.2.17",
+    "@ui-perf/metrics": "^2.0.0",
     "oxfmt": "^0.55.0",
     "oxlint": "^1.14.0",
     "oxlint-tsgolint": "^0.23.0",
@@ -61,7 +61,7 @@
     "typescript": "^6.0.3"
   },
   "peerDependencies": {
-    "@figliolia/metrics": ">=1.1.1",
+    "@ui-perf/metrics": ">=2.0.0",
     "react": ">=18.0.0"
   },
   "packageManager": "pnpm@10.33.2+sha512.a90faf6feeab71ad6c6e57f94e0fe1a12f5dcc22cd754db40ae9593eb6a3e0b6b12e3540218bb37ae083404b1f2ce6db2a4121e979829b4aff94b99f49da1cf8"

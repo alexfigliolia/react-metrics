@@ -1,6 +1,6 @@
 # React Metrics
 
-React bindings for [@figliolia/metrics](https://www.npmjs.com/package/@figliolia/metrics)!
+React bindings for [@ui-perf/metrics](https://www.npmjs.com/package/@ui-perf/metrics)!
 
 This library has since been moved to `@ui-perf/react-metrics`.
 
@@ -9,9 +9,11 @@ This library is designed to make integrating Metric events with React rendering 
 ## Installation
 
 ```bash
-npm i -S @figliolia/react-metrics
+npm i -S @ui-perf/react-metrics
 # or
-yarn add @figliolia/react-metrics
+yarn add @ui-perf/react-metrics
+# or
+pnpm add @ui-perf/react-metrics
 ```
 
 ## Getting Started
@@ -19,13 +21,14 @@ yarn add @figliolia/react-metrics
 ### StartMetric & StopMetric
 
 ```tsx
-import { Metric } from "@figliolia/metrics";
-import { StartMetric, StopMetric } from "@figliolia/react-metrics"
+import { Metric } from "@ui-perf/metrics";
+import { StartMetric, StopMetric } from "@ui-perf/react-metrics"
 
 const MyMetric = new Metric("My Metric");
 
 export const MyComponent = () => {
   const [data, setData] = useState(null);
+
   useEffect(() => {
     fetch("/data").then(async data => {
       setData(await data.json());
@@ -58,8 +61,8 @@ export const MyComponent = () => {
 Swapping your `<StartMetric />` for `useStartMetric()`:
 
 ```tsx
-import { Metric } from "@figliolia/metrics";
-import { useStartMetric } from "@figliolia/react-metrics";
+import { Metric } from "@ui-perf/metrics";
+import { useStartMetric } from "@ui-perf/react-metrics";
 
 const MyMetric = new Metric("My Metric");
 
@@ -91,8 +94,8 @@ export const MyComponent = () => {
 Swapping your `<StopMetric />` for `useStopMetric()`:
 
 ```tsx
-import { Metric } from "@figliolia/metrics";
-import { useStopMetric } from "@figliolia/react-metrics";
+import { Metric } from "@ui-perf/metrics";
+import { useStopMetric } from "@ui-perf/react-metrics";
 
 const MyMetric = new Metric("My Metric");
 
@@ -114,8 +117,8 @@ export const MyComponent: FC<{ data: string[] }> = ({ data }) => {
 Metrics provide pub-sub functionality useful for executing behaviors based upon the completion, success, failure, or duration of a given Metric. The `<MetricSubscription>` and `useMetricSubscription()` utilities allow developers to declare Metric subscriptions right from their React code - and have their subscriptions bound automatically to the Component's lifecycle:
 
 ```tsx
-import type { Metric } from "@figliolia/metrics";
-import { MetricSubscription } from "@figliolia/metrics";
+import type { Metric } from "@ui-perf/metrics";
+import { MetricSubscription } from "@ui-perf/metrics";
 
 const DurationDisplay: FC<{ metric: Metric<any, any> }> = ({ metric }) => {
   const [duration, setDuration] = useState<number | null>(null);
@@ -146,8 +149,8 @@ const DurationDisplay: FC<{ metric: Metric<any, any> }> = ({ metric }) => {
 Similarly, the same functionality can be achieved using the `useMetricSubscription()` hook:
 
 ```tsx
-import type { Metric } from "@figliolia/metrics";
-import { useMetricSubscription } from "@figliolia/metrics";
+import type { Metric } from "@ui-perf/metrics";
+import { useMetricSubscription } from "@ui-perf/metrics";
 
 const DurationDisplay: FC<{ metric: Metric<any, any> }> = ({ metric }) => {
   const [duration, setDuration] = useState<number | null>(null);
