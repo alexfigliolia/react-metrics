@@ -2,6 +2,8 @@
 
 React bindings for [@figliolia/metrics](https://www.npmjs.com/package/@figliolia/metrics)!
 
+This library has since been moved to `@ui-perf/react-metrics`.
+
 This library is designed to make integrating Metric events with React rendering simple and effective. Often times, starting or stopping a Metric or interaction begins or ends with a Component reaching the browser and rendering to the screen. For this purpose, in this package you'll find utilities such as `<MetricStart />`, `<MetricStop />`, `<MetricSubscription />`, as well as their React hook equivalents!
 
 ## Installation
