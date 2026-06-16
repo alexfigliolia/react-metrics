@@ -1,6 +1,7 @@
 import type { Metric } from "@figliolia/metrics";
-import type { IMetricSubscription } from "./types";
+
 import { useMetricSubscription } from "./useMetricSubscription";
+import type { IMetricSubscription } from "./types";
 
 /**
  * Metric Subscription
